@@ -47,9 +47,10 @@
           <a class="brand" href="#">Click Plan</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <li><%= link_to "Inventory", products_path  %></li>
+              <li><%= link_to "Login", "/signin"  %></li>
+              <li><%= link_to "Signup", "/signup"  %></li>
+              <li><%= link_to "Contact", "/contact"  %></li>
             </ul>
           </div><!--/.nav-collapse -->
 
@@ -61,13 +62,10 @@
       <div class="row-fluid">
         <div class="span9">
           <%= bootstrap_flash %>
+		  
           <%= yield %>
         </div>
       </div><!--/row-->
-
-      <footer>
-        <p>&copy; Zepho Inc 2012</p>
-      </footer>
 
     </div> <!-- /container -->
 

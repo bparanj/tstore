@@ -14,3 +14,21 @@
 
 </body>
 </html>
+
+
+TODO:
+
+1. Make required text field display error message like Cahor
+	It is not working because SimpleForm is required
+
+BookMark :
+
+	http://railscasts.com/episodes/234-simple-form-revised?view=asciicast
+
+
+Blog Post
+
+1. rails g install haml2erb
+2. Gemfile :
+	gem 'mixology'
+3. Rails console : Haml2Erb.convert('.foo')
