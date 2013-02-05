@@ -26,3 +26,4 @@ gem 'jquery-rails'
 gem 'therubyracer', :require => 'v8'
 
 gem 'simple_form'
+gem 'carrierwave'

@@ -1,8 +1,9 @@
-<%= simple_form_for(@product, :html => {:class => 'form-horizontal' }) do |f| %>
+<%= simple_form_for(@product, :html => {multipart: true, class: 'form-horizontal' }) do |f| %>
   <%= f.error_notification %>
   <%= f.input :name, required: 'required' %>
   <%= f.input :price, required: 'required' %>
-
+  <%= f.file_field :file %>
+  
   <div class="form-actions">
     <%= f.submit button_name, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

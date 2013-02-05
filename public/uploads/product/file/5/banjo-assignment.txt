@@ -1,0 +1,47 @@
+Using the Twitter Streaming API (https://dev.twitter.com/docs/streaming-api) create a website that lists Tweets with geo location specified by the user.
+
+-Create a rake task that consumes the Twitter Streaming API
+-Inserts Tweets into a Capped MongoDB "tweets" collection (http://www.mongodb.org/display/DOCS/Capped+Collections) that is limited to 100000 entries. 
+-Create Geo spatial indexes to ensure fast queries
+-Create a page where the user should be able to enter Long and Lat coordinates to see the latest 50 Tweets near that location. 
+-Use Fibers and EventMachine where applicable
+
+Requirements:
+-Rails 3
+-Ruby 1.9
+-Mongoid
+-EventMachine
+-Fibers
+-Unit tests using RSpec
+
+Bonus:
+-Use Google Maps to visualize location of Tweets
+
+
+http://tucsontangofestival.com/category/accommodations/
+
+
+
+
+
+# http://confreaks.com/videos/555-scotlandruby2011-introduction-to-eventmachine-and-evented-programming
+# http://www.confreaks.com/videos/665-rubyconf2011-advanced-eventmachine
+# https://github.com/suranyami/em-mongo-sample/blob/master/app/server.rb
+# http://rubylearning.com/blog/2010/10/01/an-introduction-to-eventmachine-and-how-to-avoid-callback-spaghetti/
+# https://raw.github.com/jordansissel/twitter-spamwatch/master/watch.rb
+# http://www.mongodb.org/display/DOCS/Geospatial+Indexing
+# http://www.igvita.com/2008/05/27/ruby-eventmachine-the-speed-demon/
+# https://github.com/igrigorik/em-synchrony
+# http://everburning.com/wp-content/uploads/2009/02/eventmachine_introduction_10.pdf
+# http://www.10gen.com/presentations/webinar/introduction_to_mongodb
+# https://mongocasts.s3.amazonaws.com/003_introduction_to_the_mongodb_interactive_shell.mov
+
+# Done
+# http://www.mongodb.org/display/DOCS/Capped+Collections
+# db.createCollection("tweets", {capped:true, size:100000})
+# https://dev.twitter.com/docs/streaming-api/methods
+# db.tweets.ensureIndex( { location : "2d" } )
+# db.tweets.find({location : {$near : [-120, 30]}})
+# http://intridea.com/posts/easy-ip-geotargeting-with-geokit-and-mongomapper
+# https://dev.twitter.com/docs/streaming-api/methods
+# http://boldr.net/test-mongomapper
